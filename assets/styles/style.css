@@ -11,7 +11,7 @@
     --text-white:#fff;
     /* ! Sizes */
     --text-def-size: 16px;
-    --home-content-size:4rem;
+    --home-content-size:4.2rem;
     --text-bigger-size:18px;
     --small-content-size: 45px;
     --ex-small-content-size: 24px;
@@ -28,11 +28,11 @@
 
 @font-face {
     font-family:_Regular;
-    src: url('/assets/fonts/Ubuntu-Regular.ttf');
+    src: url('../fonts/Ubuntu-Regular.ttf');
 }
 @font-face {
     font-family:_Bold;
-    src: url('/assets/fonts/Ubuntu-Bold.ttf');
+    src: url('../fonts/Ubuntu-Bold.ttf');
 }
 
 
@@ -69,6 +69,11 @@ img{
     height: 100%;
     object-fit: cover;
 }
+button{
+    display: inline-block;
+    border: none;
+    outline: none;
+}
 
 
 /* !============ Header ==========*/
@@ -78,38 +83,32 @@ header{
     height: 100px;
     display: flex;
 }
-header nav{
+header .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 }
 
-button{
-    display: inline-block;
-    border: none;
-    outline: none;
-}
-
 /* !============= Logo ===============*/
-header nav  .logo__wrapper{
+header .navbar  .navbar_logo__wrapper{
     width: auto;
     height: 50px;
 }
 
 /* ! =========== links ============ */
-header nav  .nav__link__items{
+header .navbar  .navbar__sections{
     justify-self: flex-start;
     display: flex;
     font-family: _Regular;
     width: 80%;
 }
-header nav  .nav__link__items .nav__link__item .nav__link{
+header .navbar  .navbar__sections .navbar__sections__item a{
     margin-left: 40px;
     font-size: var(--text-bigger-size);
     color:var(--text-def-color);
 }
-header nav  .nav__link__items .nav__link__item:first-child{
+header .navbar  .navbar__sections .navbar__sections__item:first-child{
     font-weight: bold;
 }
 
@@ -120,20 +119,20 @@ main{
     width: 100%;
     position: relative;
 }
-.home{
+.home__container{
     padding: 100px 0 0;
     display: flex;
 }
-.home .home__data__wrapper{
+.home__container .home__container__data{
     width: 40%;
     height: 100%;
 }
-.home .home__data__wrapper .home__data{
+.home__container .home__container__data .home__container__data__wrapper{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.home .home__data .home__data__content{
+.home__container .home__container__data .home__container__data__wrapper .home__container__data__wrapper__content {
     font-size: var(--home-content-size);
     color: var(--text-color);
     font-family: _Bold;
@@ -141,18 +140,18 @@ main{
     margin-bottom: 50px;
 }
 
-.home .home__data  .home__data__text{
+.home__container .home__container__data .home__container__data__wrapper .home__container__data__wrapper__text {
     font-size: var(--text-bigger-size);
     font-family: _Regular;
     line-height: 29px;
     margin-bottom: 50px;
 }
-.home .home__data  .home__data__btn{
+.home__container .home__container__data .home__container__data__wrapper .home__container__data__wrapper__btn {
     background-color: var(--bg-purple);
     padding: 18px 38px;
     border-radius: 50px; 
 }
-.home .home__data  .home__data__btn .home__data__btn__link {
+.home__container .home__container__data .home__container__data__wrapper .home__container__data__wrapper__btn  a{
     color: var(--text-white);
     font-size: var(--text-bigger-size);
     font-family: _Regular;
@@ -160,11 +159,11 @@ main{
 }
 
 /* ! ========= Home img ============ */
-.home .home__img{
+.home__container .home__container__img{
     position: relative;
     width: 60%;
 }
-.home .home__img__wrapper{
+.home__container .home__container__img .home__container__img__wrapper {
     width: auto;
     max-height: 420px;
     position: absolute;
@@ -185,21 +184,21 @@ main{
     border-radius: 50px;
     padding: 40px 30px;
 }
-.store .store__container .store__img__wrapper{
+.store .store__container .store__container__img__wrapper{
     width: auto;
     height: 500px;
 }
-.store .store__container .store__data{
+.store .store__container .store__container__data{
     width: 50%;
 }
-.store .store__container .store__data .store__data__content{
+.store .store__container .store__container__data .store__container__data__content{
     font-size:var(--small-content-size);
     color: var(--text-color);
     font-family: _Bold;
     line-height: 52px;
     padding-bottom: 40px;
 }
-.store .store__container .store__data .store__data__text{
+.store .store__container .store__container__data .store__container__data__text{
     font-size: var(--text-bigger-size);
     color: var(--text-def-color);
     font-family: _Regular;
@@ -218,14 +217,14 @@ main{
     width: 100%;
     flex-direction: column;
 }
-.features .features__data__container .features__title{
+.features .features__data__container .features__data__container__title{
     font-size: var(--small-content-size);
     color: var(--text-color);
     font-family: _Bold;
     margin-bottom: 50px;
 }
 
-.features .features__data__container .features__text{
+.features .features__data__container .features__data__container__text{
     font-size: var(--text-bigger-size);
     line-height: 29px;
     text-align: center;
@@ -235,7 +234,7 @@ main{
 }
 
 /* ! ========= feature box =========== */
-.features .features__box__container   {
+.features .features__boxes__container   {
     padding: 100px 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -243,7 +242,7 @@ main{
     justify-items: center;
 }
 
-.features .features__box__container  .features__box  {
+.features .features__boxes__container  .features__boxes__container__box  {
     position: relative;
     border-radius: 50px;
     display: flex;
@@ -255,10 +254,10 @@ main{
     padding-right: 40px ;
 }
 /* ! Trapaziod bg */
-.features .features__box__container  .features__box  .trap_4,
-.features .features__box__container  .features__box  .trap_3,
-.features .features__box__container  .features__box  .trap_2, 
-.features .features__box__container  .features__box  .trap_1{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__4,
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__3,
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__2, 
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__1{
     position: absolute;
     top: 0;
     right: 0;
@@ -268,48 +267,48 @@ main{
     border-bottom-right-radius: 50px;
     opacity: .2;
 }
-.features .features__box__container  .features__box  .trap_1{
-    background-image: url('./bg-vector.svg');
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__1{
+    background-image: url('../images/features/bg-vector.svg');
     background-position: 95% 10%;
     background-repeat: no-repeat;
     background-color:var(--bg-blue) ;
 }
-.features .features__box__container  .features__box  .trap_2{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__2{
     background-color:var(--bg-purple);
-    background-image: url('./bg-vector-2.svg');
+    background-image: url('../images/features/bg-vector-2.svg');
     background-position: 88% 90%;
     background-repeat: no-repeat;
 }
-.features .features__box__container  .features__box  .trap_3{
-    background-image: url('./bg-vector-3.svg');
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__3{
+    background-image: url('../images/features/bg-vector-3.svg');
     background-position: 88% 10%;
     background-repeat: no-repeat;
     background-color:var(--bg-pink) ;
 }
-.features .features__box__container  .features__box  .trap_4{
-    background-image: url('./bg-vector-4.svg');
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__4{
+    background-image: url('../images/features/bg-vector-4.svg');
     background-position: 90% 30%;
     background-repeat: no-repeat;
     background-color: var(--bg-blue);
     background-size: 85%;
 }
 
-.features .features__box__container  .features__box  .trap_1::after{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__1::after{
 background-color:var(--bg-blue) ;
 }
-.features .features__box__container  .features__box  .trap_2::after{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__2::after{
 background-color:var(--bg-purple) ;
 }
-.features .features__box__container  .features__box  .trap_3::after{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__3::after{
     background-color:var(--bg-pink) ;
 }
-.features .features__box__container  .features__box  .trap_4::after{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__4::after{
     background-color: var(--bg-blue);
 }
-.features .features__box__container  .features__box  .trap_4::after,
-.features .features__box__container  .features__box  .trap_3::after,
-.features .features__box__container  .features__box  .trap_2::after,
-.features .features__box__container  .features__box  .trap_1::after{
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__4::after,
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__3::after,
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__2::after,
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__trap__1::after{
     position: absolute;
     content: '';
     top: 0;
@@ -321,10 +320,10 @@ background-color:var(--bg-purple) ;
     border-bottom-left-radius: 50px;
 }
 
-.features .features__box__container  .features__box  .features__img__wrapper .features__img {
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__img {
     z-index: 2;
 }
-.features .features__box__container  .features__box  .features__img__wrapper {
+.features .features__boxes__container  .features__boxes__container__box  .features__boxes__container__box__img .features__boxes__container__box__img__wrapper  {
     position: absolute;
     top: 50%;
     left:50px;
@@ -332,38 +331,38 @@ background-color:var(--bg-purple) ;
     width: auto;
     max-height: 200px;
 }
-.features .features__box__container  .features__box:first-child  .features__img__wrapper {
+.features .features__boxes__container  .features__boxes__container__box:first-child  .features__boxes__container__box__img .features__boxes__container__box__img__wrapper  {
     height:190px;
     left: 65px;
 }
-.features .features__box__container  .features__box .features__box__data {
+.features .features__boxes__container  .features__boxes__container__box .features__boxes__container__box__data {
     width: 45%;
     z-index: 2;
 }
-.features .features__box__container  .features__box .features__box__data .features__box__data__title{
+.features .features__boxes__container  .features__boxes__container__box .features__boxes__container__box__data .features__boxes__container__box__data__title{
     font-size: var(--ex-small-content-size);
     font-family: _Regular;
     padding-bottom: 20px;
 }
 
-.features .features__box__container  .features__box .features__box__data .features__box__data__text{
+.features .features__boxes__container  .features__boxes__container__box .features__boxes__container__box__data .features__boxes__container__box__data__text{
     font-size: var(--text-def-size);
     font-family: _Regular;
     line-height: 26px;
     padding-bottom: 20px;
 }
 /* ! ==== more ==== */
-.features .features__box__container .features__box .more__wrapper {
+.features .features__boxes__container .features__boxes__container__box .features__boxes__container__box__data .features__boxes__container__box__data__more__wrapper {
     display: flex;
     align-items: center;
 }
-.features .features__box__container .features__box .more__wrapper .more__text {
+.features .features__boxes__container .features__boxes__container__box .features__boxes__container__box__data .features__boxes__container__box__data__more__wrapper .features__boxes__container__box__data__more__wrapper__text  {
     font-family: _Regular;
     letter-spacing: .01rem;
     font-size: var(--text-def-size);
     margin-right: 15px;
 }
-.features .features__box__container .features__box .more__wrapper .arrow {
+.features .features__boxes__container .features__boxes__container__box .features__boxes__container__box__data .features__boxes__container__box__data__more__wrapper .features__boxes__container__box__data__more__wrapper__arrow{
     width: auto;
     height: 16px;
 }
@@ -372,9 +371,8 @@ background-color:var(--bg-purple) ;
 /* !============ Bloggers ========= */
 .bloggers{
     padding: 100px 0 100px;
-    /* height: auto; */
 }
-.bloggers .bloggers__wrapper{
+.bloggers .bloggers__container{
     background-color: var(--bg-purple);
     padding: 100px 100px 40px 100px;
     border-radius: 50px;
@@ -388,14 +386,7 @@ background-color:var(--bg-purple) ;
     " boxes"
     "nav";
 }
-
-.bloggers .bloggers__wrapper .bloggers__boxes{
-    grid-area: boxes;
-    height: 300px;
-    position: relative;
-    margin-bottom: 50px;
-}
-.bloggers .bloggers__wrapper .bloggers__title { 
+.bloggers .bloggers__container .bloggers__container__title { 
     font-size: 40px;
     color: #fff;
     font-family: _Regular;
@@ -403,7 +394,14 @@ background-color:var(--bg-purple) ;
     grid-area: title;
     margin-bottom: 50px;
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper{
+
+.bloggers .bloggers__container .bloggers__container__boxes{
+    grid-area: boxes;
+    height: 300px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper {
     position: absolute;
     top: 0;
     right: -60%;
@@ -411,7 +409,7 @@ background-color:var(--bg-purple) ;
     grid-template-columns: 3fr 2fr 2fr;
     gap: 20px;
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box {
     display: flex;
     padding: 60px 70px;
     background-color: #fff;
@@ -419,21 +417,20 @@ background-color:var(--bg-purple) ;
     width: 100%;
     height: 90%;
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .shadow{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box.shadow {
     box-shadow: 0px 15px 0px rgb(150, 89, 236);
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .shadow__blur{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box.shadow__blur {
     box-shadow: 0px 15px 0px rgb(148, 84, 238, 0.25);
-    /* display: none; */
     
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box  img{ 
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box img{
     background-color: rgba(0,0, 0, 0.05);
     width: auto;
     border-radius: 50%;
     height: 70px;
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box .blogger__right{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box .bloggers__container__boxes__wrapper__box__data {
     font-family: _Regular;
     display: flex;
     flex-direction: column;
@@ -442,65 +439,65 @@ background-color:var(--bg-purple) ;
     margin-left: 20px;
     margin-bottom: 30px;
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box  .blogger__name{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box .bloggers__container__boxes__wrapper__box__data .bloggers__container__boxes__wrapper__box__data__info {
     margin-bottom: 20px;
 }
-    .bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box  .blogger__name h3{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box .bloggers__container__boxes__wrapper__box__data .bloggers__container__boxes__wrapper__box__data__info h3{
     font-size: var(--text-bigger-size);
     margin-bottom: 5px;
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box  .blogger__name .blogger__job{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box .bloggers__container__boxes__wrapper__box__data .bloggers__container__boxes__wrapper__box__data__info a{
     font-size: var(--text-small-size);
     color: var(--bg-purple);
 }
-.bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box  .blur__text{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box .bloggers__container__boxes__wrapper__box__data .bloggers__container__boxes__wrapper__box__data__resume.blur__text {
     background: linear-gradient(to right, var(--text-def-color) 10%, rgba(255, 255, 255, 0) 100%);;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-    .bloggers .bloggers__wrapper .bloggers__box__wrapper .bloggers__box  .blogger__resume{
+.bloggers .bloggers__container .bloggers__container__boxes .bloggers__container__boxes__wrapper .bloggers__container__boxes__wrapper__box .bloggers__container__boxes__wrapper__box__data .bloggers__container__boxes__wrapper__box__data__resume {
     font-size: var(--text-bigger-size);
     color: var(--text-def-color);
     font-family: _Regular;
     line-height: 30px;
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .dots__wrapper{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__items{
     display: flex;
     gap: 8px;
     align-items: center;
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .dots__wrapper .dot:first-child{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__items .bloggers__container__navigation__wrapper__items__item:first-child{
     background-color:var(--bg-pink);
     width: 10px;
     height: 10px;
 
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .dots__wrapper .dot{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__items .bloggers__container__navigation__wrapper__items__item{
     width: 5px;
     height: 5px;
     border-radius: 5px;
     background-color: #fff;
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .arrows__wrapper{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__arrows{
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .arrows__wrapper .arrow__left{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__arrows .bloggers__container__navigation__wrapper__arrows__left{
     width: auto;
     height: 18px;
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .arrows__wrapper .arrow__right{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__arrows .bloggers__container__navigation__wrapper__arrows__right{
     width: auto;
     height: 16px;
 
 }
-.bloggers .bloggers__wrapper .bloggers__navigation__wrapper .arrows__wrapper .arrow__left img{
+.bloggers .bloggers__container .bloggers__container__navigation__wrapper .bloggers__container__navigation__wrapper__arrows .bloggers__container__navigation__wrapper__arrows__left img{
     object-fit: contain;
 }
 
@@ -686,7 +683,7 @@ header nav  .nav__link__items .nav__link__item .nav__link{
 }
 /* ! ========= feature box =========== */
 
-.features .features__box__container  .features__box .trap_4{
+.features .features__boxes__container  .features__box .trap_4{
     background-size: 85% 
 }
 .features .features__box__container  .features__box .trap_3{
