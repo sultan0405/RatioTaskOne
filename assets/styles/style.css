@@ -38,6 +38,8 @@
 
 
 body {
+    /* не азадана мин ширина сайта */
+    /* не заданы дефолные стили для шрифта */
     background: var(--body-bg);
     overflow-x: hidden;
     width: 100%;
@@ -53,6 +55,7 @@ html {
 
 nav,
 section {
+    /* это стили для контейнера */
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
@@ -80,6 +83,7 @@ button {
 }
 
 /* !============ Header ==========*/
+/* стилизация по тэгам плохой тон, надо задавать class="header" и тд */
 header {
     width: 100%;
     padding: 10px 0;
@@ -102,6 +106,7 @@ header .navbar .navbar__logo__wrapper {
 header .navbar .navbar__sections {
     justify-self: flex-start;
     display: flex;
+    /* надо задавать безопастный шрифт sans-serif или serif */
     font-family: _Regular;
     width: 80%;
 }
@@ -131,7 +136,7 @@ main {
     width: 40%;
     height: 100%;
 }
-
+/* не по БЭМ */
 .home__container .home__container__data .home__container__data__wrapper {
     display: flex;
     flex-direction: column;
