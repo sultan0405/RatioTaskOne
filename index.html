@@ -17,13 +17,17 @@
 <body>
     <!-- ! ======= Header ======== -->
     <header>
+<!--    именование не по БЭМ    -->
         <nav class="navbar">
+<!--     это отдельный блок logo       -->
             <a href="#" class="navbar__logo__wrapper">
                 <img src="./assets/images/navbar/logo.svg" alt="warehouse-logo">
             </a>
-
+<!-- это отдельный блок navs или list (на пример) -->
             <ul class="navbar__sections">
+<!--       navs__item         -->
                 <li class="navbar__sections__item">
+                    <!--       navs__link        -->
                     <a href="#about">About</a>
                 </li>
                 <li class="navbar__sections__item">
@@ -37,16 +41,18 @@
     </header>
 
     <!-- ! ======= Home ==== -->
+<!--  в данном случае  main должна содержать все секции и они должны быть вложенеы в один контейнер  -->
     <main>
         <section id="home" class="home__container">
             <div class="home__container__data">
                 <div class="home__container__data__wrapper">
+<!--             h1 должен быть только 1 на странице       -->
                     <h1 class="home__container__data__wrapper__content">Save your data storage here.</h1>
-
+<!-- не по БЭМ и тд ниже -->
                     <p class="home__container__data__wrapper__text">Data Warehouse is a data storage area that has been
                         tested for security, so you can store your data here
                         safely but not be afraid of being stolen by others.</p>
-
+<!-- это не кнопка, а ссылка, оборачивать ссылку в кнопку плохой тон -->
                     <button class="home__container__data__wrapper__btn">
                         <a href="#features" class="home__data__wrapper__btn__link">
                             Learn more
@@ -74,6 +80,7 @@
             <div class="store__container__data">
                 <h1 class="store__container__data__content">We are a high-level
                     data
+<!--          закрывайщий тэг надо переносить на сл строку и тд ниже          -->
                     storage bank</h1>
                 <p class="store__container__data__text">The place to store various data that you can access at any time
                     through the
@@ -244,7 +251,7 @@
 
                 </div>
             </div>
-
+<!--    в данной ситуации для кнопок надо предусмотреть span с текстом который скрыть visually-hidden, если стили не подгрузятся, то пользователю не будет понятен функционал    -->
             <div class="bloggers__container__navigation__wrapper">
                 <div class="bloggers__container__navigation__wrapper__items">
                     <span class="bloggers__container__navigation__wrapper__items__item"></span>
