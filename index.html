@@ -15,306 +15,285 @@
 </head>
 
 <body>
-    <!-- ! ======= Header ======== -->
-    <header>
-        <nav class="navbar">
-            <a href="#" class="navbar__logo__wrapper">
-                <img src="./assets/images/navbar/logo.svg" alt="warehouse-logo">
+    <!--  Header  -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <div class="header__logo--wrapper">
+                    <img src="./assets/images/navbar/logo.svg" alt="warehouse-logo">
+                </div>
             </a>
-
-            <ul class="navbar__sections">
-                <li class="navbar__sections__item">
-                    <a href="#about">About</a>
-                </li>
-                <li class="navbar__sections__item">
-                    <a href="#help">Help</a>
-                </li>
-                <li class="navbar__sections__item">
-                    <a href="#features">Features</a>
-                </li>
-            </ul>
-        </nav>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
+                    <li class="menu__item"><a href="#help" class="menu__link">Help</a></li>
+                    <li class="menu__item"><a href="#features" class="menu__link">Features</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <!-- ! ======= Home ==== -->
-    <main>
-        <section id="home" class="home__container">
-            <div class="home__container__data">
-                <div class="home__container__data__wrapper">
-                    <h1 class="home__container__data__wrapper__content">Save your data storage here.</h1>
-
-                    <p class="home__container__data__wrapper__text">Data Warehouse is a data storage area that has been
-                        tested for security, so you can store your data here
-                        safely but not be afraid of being stolen by others.</p>
-
-                    <button class="home__container__data__wrapper__btn">
-                        <a href="#features" class="home__data__wrapper__btn__link">
-                            Learn more
-                        </a>
-                    </button>
+    
+    <!-- Save-Data -->
+    <main class="main">
+        <section id="save-data" class="save-data">
+            <div class="save-data__container">
+                <div class="save-data__content">
+                    <div class="save-data__block--text">
+                        <h1 class="block-text__title">Save your data storage here.</h1>
+                        <div class="block-text__text">Data Warehouse is a data storage area that has been tested for security, so you can store your data here safely but not be afraid of being stolen by others.</div>
+                        <a href="#features" class="block-text__btn">Learn more</a>
+                    </div>
+                </div>
+                <div class="save-data__img">
+                    <div class="save-data__img--wrapper">
+                        <img src="./assets/images/save-data/save-data.png" alt="save-data">
+                    </div>
                 </div>
             </div>
-
-            <div class="home__container__img">
-                <div class="home__container__img__wrapper">
-                    <img src="./assets/images/home/home.png" alt="warehouse">
-                </div>
-            </div>
-
         </section>
-    </main>
-
-    <!-- ! ======= Store ======== -->
-    <section class="store">
-        <div class="store__container">
-            <div class="store__container__img__wrapper">
-                <img src="./assets/images/about-us/about-us.svg" alt="warehouse">
-            </div>
-
-            <div class="store__container__data">
-                <h1 class="store__container__data__content">We are a high-level
-                    data
-                    storage bank</h1>
-                <p class="store__container__data__text">The place to store various data that you can access at any time
-                    through the
-                    internet and where you can carry it.
-                    This very flexible storage area has a high level of security. To enter into your own data you must
-                    enter the password that you created when you registered in this Data Warehouse. </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ! ======= Features ====== -->
-    <section class="features" id="features">
-        <div class="features__data__container">
-            <h3 class="features__data__container__title">Features</h3>
-            <p class="features__data__container__text">Some of the features and advantages that we provide for those of
-                you who store
-                data in this Data Warehouse.</p>
-        </div>
-
-        <div class="features__boxes__container">
-            <div class="features__boxes__container__box">
-                <div class="features__boxes__container__box__trap__1 trap"></div>
-
-                <div class="features__boxes__container__box__img">
-                    <div class="features__boxes__container__box__img__wrapper">
-                        <img src="./assets/images/features/search-data.svg" alt="warehouse-search-data">
-                    </div>
+    
+        <!-- Storage-Bank -->
+        <section class="storage-bank" id="storage-bank">
+            <div class="storage-bank__container">
+                <div class="storage-bank__img">
+                    <img src="./assets/images/storage-bank/storage-bank.svg" alt="storage-bank">
                 </div>
-                <div class="features__boxes__container__box__data">
-                    <h3 class="features__boxes__container__box__data__title">Search Data</h3>
-                    <p class="features__boxes__container__box__data__text">Don’t worry if your data is very large, the
-                        Data Warehoue
-                        provides a search engine, which is useful for making it easier to find data effectively saving
-                        time.</p>
-                    <div class="features__boxes__container__box__data__more__wrapper">
-                        <h3 class="features__boxes__container__box__data__more__wrapper__text">Learn more</h3>
-                        <div class="features__boxes__container__box__data__more__wrapper__arrow">
-                            <img src="./assets/icons/features/arrow.svg" alt="arrow">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="features__boxes__container__box">
-                <div class="features__boxes__container__box__trap__2 trap"></div>
-                <div class="features__boxes__container__box__img">
-                    <div class="features__boxes__container__box__img__wrapper">
-                        <img src="./assets/images/features/hour-access.svg" alt="warehouse-search-data">
-                    </div>
-                </div>
-                <div class="features__boxes__container__box__data">
-                    <h3 class="features__boxes__container__box__data__title">Search Data</h3>
-                    <p class="features__boxes__container__box__data__text">Don’t worry if your data is very large, the
-                        Data Warehoue
-                        provides a search engine, which is useful for making it easier to find data effectively saving
-                        time.</p>
-                    <div class="features__boxes__container__box__data__more__wrapper">
-                        <h3 class="features__boxes__container__box__data__more__wrapper__text">Learn more</h3>
-                        <div class="features__boxes__container__box__data__more__wrapper__arrow">
-                            <img src="./assets/icons/features/arrow.svg" alt="arrow">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="features__boxes__container__box">
-                <div class="features__boxes__container__box__trap__3 trap"></div>
-
-                <div class="features__boxes__container__box__img">
-                    <div class="features__boxes__container__box__img__wrapper">
-                        <img src="./assets/images/features/print-out.svg" alt="warehouse-search-data">
-                    </div>
-                </div>
-                <div class="features__boxes__container__box__data">
-                    <h3 class="features__boxes__container__box__data__title">Search Data</h3>
-                    <p class="features__boxes__container__box__data__text">Don’t worry if your data is very large, the
-                        Data Warehoue
-                        provides a search engine, which is useful for making it easier to find data effectively saving
-                        time.</p>
-                    <div class="features__boxes__container__box__data__more__wrapper">
-                        <h3 class="features__boxes__container__box__data__more__wrapper__text">Learn more</h3>
-                        <div class="features__boxes__container__box__data__more__wrapper__arrow">
-                            <img src="./assets/icons/features/arrow.svg" alt="arrow">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="features__boxes__container__box">
-                <div class="features__boxes__container__box__trap__4 trap"></div>
-
-                <div class="features__boxes__container__box__img">
-                    <div class="features__boxes__container__box__img__wrapper">
-                        <img src="./assets/images/features/security-code.svg" alt="warehouse-search-data">
-                    </div>
-                </div>
-                <div class="features__boxes__container__box__data">
-                    <h3 class="features__boxes__container__box__data__title">Search Data</h3>
-                    <p class="features__boxes__container__box__data__text">Don’t worry if your data is very large, the
-                        Data Warehoue
-                        provides a search engine, which is useful for making it easier to find data effectively saving
-                        time.</p>
-                    <div class="features__boxes__container__box__data__more__wrapper">
-                        <h3 class="features__boxes__container__box__data__more__wrapper__text">Learn more</h3>
-                        <div class="features__boxes__container__box__data__more__wrapper__arrow">
-                            <img src="./assets/icons/features/arrow.svg" alt="arrow">
-                        </div>
+                <div class="storage-bank__content">
+                    <div class="storage-bank__block--text">
+                        <h2 class="block-text__title">We are a high-level data storage bank</h2>
+                        <div class="block-text__text">The place to store various data that you can access at any time through the internet  and where you can carry it. This very flexible storage area has a high level of security. To enter into your own data you must enter the password that you created when you registered in this Data Warehouse. </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- ! Bloggers -->
-    <main class="bloggers">
-        <section class="bloggers__container">
-            <h2 class="bloggers__container__title">Testimonials</h2>
-            <div class="bloggers__container__boxes">
-
-                <div class="bloggers__container__boxes__wrapper">
-                    <div class="bloggers__container__boxes__wrapper__box shadow">
-                        <div class="bloggers__container__boxes__wrapper__box__img__wrapper">
-                            <img src="./assets/images/blogger/blogger.png" alt="blogger">
-                        </div>
-                        <div class="bloggers__container__boxes__wrapper__box__data">
-                            <div class="bloggers__container__boxes__wrapper__box__data__info">
-                                <h3>John Fang</h3>
-                                <a href="#">wordfaang.com</a>
+        </section>
+    
+        <!-- Features -->
+        <section class="features" id="features">
+            <div class="features__container">
+                <div class="features__content">
+                    <div class="features__block--text">
+                        <h2 class="block-text__title">Features</h2>
+                        <div class="block-text__text">Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</div>
+                    </div>
+                </div>
+                <div class="features__boxes--wrapper">
+                    <div class="features-box">
+                        <div class="box__trap--1 trap"></div>
+                        <div class="box__img">
+                            <div class="box__img--wrapper">
+                                <img src="./assets/images/features/search-data.svg" alt="search-data">
                             </div>
-                            <p class="bloggers__container__boxes__wrapper__box__data__resume">
-                                Suspendisse ultrices at diam lectus nullam.
-                                Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
-                                laoreet nulla.
-                            </p>
                         </div>
-                    </div>
-
-                    <div class="bloggers__container__boxes__wrapper__box shadow__blur">
-                        <div class="bloggers__container__boxes__wrapper__box__img__wrapper">
-                            <img src="./assets/images/blogger/blogger.png" alt="blogger">
-                        </div>
-                        <div class="bloggers__container__boxes__wrapper__box__data">
-                            <div class="bloggers__container__boxes__wrapper__box__data__info">
-                                <h3>John Fang</h3>
-                                <a href="#" >UX engineer</a>
+                        <div class="box__content">
+                            <div class="box__block--text">
+                                <h3 class="box-text__title"> Search Data  </h3>
+                                <div class="box-text__text">Don't worry if your data is very large, the Data Warehoue provides a search engine, which is useful for making it easier to find data effectively saving time.</div>
                             </div>
-                            <p class="bloggers__container__boxes__wrapper__box__data__resume blur__text">
-                                Suspendisse ultrices at diam lectus nullam.
-                                Nisl, sagittis viverra enim erat tortor.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bloggers__container__boxes__wrapper__box shadow__blur">
-                        <div class="bloggers__container__boxes__wrapper__box__img__wrapper">
-                            <img src="./assets/images/blogger/blogger.png" alt="blogger">
-                        </div>
-                        <div class="bloggers__container__boxes__wrapper__box__data">
-                            <div class="bloggers__container__boxes__wrapper__box__data__info">
-                                <h3>John Fang</h3>
-                                <a href="#" >wordfaang.com</a>
+                            <div class="box__block--more">
+                                <a href="#" class="box-more__text">Learn More</a>
+                                <div class="box-more__arrow">
+                                    <img src="./assets/icons/features/arrow.svg" alt="arrow">
+                                </div>
                             </div>
-                            <p class="bloggers__container__boxes__wrapper__box__data__resume blur__text">
-                                Suspendisse ultrices at diam lectus nullam.
-                                Nisl, sagittis viverra enim erat tortor.
-                            </p>
                         </div>
                     </div>
-
+                    <div class="features-box">
+                        <div class="box__trap--2 trap"></div>
+                        <div class="box__img">
+                            <div class="box__img--wrapper">
+                                <img src="./assets/images/features/hour-access.svg" alt="hour-access">
+                            </div>
+                        </div>
+                        <div class="box__content">
+                            <div class="box__block--text">
+                                <h3 class="box-text__title">Hour Access</h3>
+                                <div class="box-text__text">Access is given 24 hours a full morning to night and meet again in the morning, giving you comfort when you need data when urgent. </div>
+                            </div>
+                            <div class="box__block--more">
+                                <a href="#" class="box-more__text">Learn More</a>
+                                <div class="box-more__arrow">
+                                    <img src="./assets/icons/features/arrow.svg" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-box">
+                        <div class="box__trap--3 trap"></div>
+                        <div class="box__img">
+                            <div class="box__img--wrapper">
+                                <img src="./assets/images/features/print-out.svg" alt="print-out">
+                            </div>
+                        </div>
+                        <div class="box__content">
+                            <div class="box__block--text">
+                                <h3 class="box-text__title">Print Out</h3>
+                                <div class="box-text__text"> Print out service gives you convenience if someday you need print data, just edit it all and just print it. </div>
+                            </div>
+                            <div class="box__block--more">
+                                <a href="#" class="box-more__text">Learn More</a>
+                                <div class="box-more__arrow">
+                                    <img src="./assets/icons/features/arrow.svg" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-box">
+                        <div class="box__trap--4 trap"></div>
+                        <div class="box__img">
+                            <div class="box__img--wrapper">
+                                <img src="./assets/images/features/security-code.svg" alt="security-code">
+                            </div>
+                        </div>
+                        <div class="box__content">
+                            <div class="box__block--text">
+                                <h3 class="box-text__title">Sequrity Code</h3>
+                                <div class="box-text__text">Don't worry if your data is very large, the Data Warehoue provides a search engine, which is useful for making it easier to find data effectively saving time.</div>
+                            </div>
+                            <div class="box__block--more">
+                                <a href="#" class="box-more__text">Learn More</a>
+                                <div class="box-more__arrow">
+                                    <img src="./assets/icons/features/arrow.svg" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="bloggers__container__navigation__wrapper">
-                <div class="bloggers__container__navigation__wrapper__items">
-                    <span class="bloggers__container__navigation__wrapper__items__item"></span>
-                    <span class="bloggers__container__navigation__wrapper__items__item"></span>
-                    <span class="bloggers__container__navigation__wrapper__items__item"></span>
-                    <span class="bloggers__container__navigation__wrapper__items__item"></span>
+        </section>
+    
+        <!--  Bloggers  -->
+        <section class="bloggers">
+            <div class="bloggers__container">
+                <div class="bloggers__block--text">
+                    <h2 class="block-text__title">Testimonials</h2>
                 </div>
-                <div class="bloggers__container__navigation__wrapper__arrows">
-                    <div class="bloggers__container__navigation__wrapper__arrows__left">
-                        <img src="./assets/icons/blogger/arrow-left.svg" alt="">
+                <div class="bloggers__group">
+                    <div class="bloggers__group--wrapper">
+                            <div class="group__blogger">
+                                <div class="blogger__img blogger-1">
+                                    <div class="blogger__img--wrapper">
+                                        <img src="./assets/images/blogger/blogger.svg" alt="blogger">
+                                    </div>
+                                </div>
+                                <div class="blogger__content">
+                                    <div class="content__header">
+                                        <div class="content__header--name">John Fang</div>
+                                        <a href="https://wordfaang.com" class="content__header--link">wordfaang.com</a>
+                                    </div>
+                                    <div class="content__body">
+                                        <div class="content__body--text">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group__blogger">
+                                <div class="blogger__img">
+                                    <div class="blogger__img--wrapper">
+                                        <img src="./assets/images/blogger/blogger.svg" alt="blogger">
+                                    </div>
+                                </div>
+                                <div class="blogger__content">
+                                    <div class="content__header">
+                                        <div class="content__header--name">John Fang</div>
+                                        <a href="https://wordfaang.com" class="content__header--link">wordfaang.com</a>
+                                    </div>
+                                    <div class="content__body">
+                                        <div class="content__body--text blur-text">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group__blogger">
+                                <div class="blogger__img">
+                                    <div class="blogger__img--wrapper">
+                                        <img src="./assets/images/blogger/blogger.svg" alt="blogger">
+                                    </div>
+                                </div>
+                                <div class="blogger__content">
+                                    <div class="content__header">
+                                        <div class="content__header--name">John Fang</div>
+                                        <a href="https://wordfaang.com" class="content__header--link">wordfaang.com</a>
+                                    </div>
+                                    <div class="content__body">
+                                        <div class="content__body--text blur-text">Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor. </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                    <div class="bloggers__container__navigation__wrapper__arrows__right">
-                        <img src="./assets/icons/blogger/arrow-right.svg" alt="">
+                </div>
+                <div class="bloggers__controls">
+                    <div class="bloggers__controls--wrapper">
+                        <div class="controls__left">
+                            <div class="controls__left--wrapper">
+                                <span class="control"></span>
+                                <span class="control"></span>
+                                <span class="control"></span>
+                                <span class="control"></span>
+                            </div>
+                        </div>
+                        <div class="controls__right">
+                            <div class="controls__right--wrapper">
+                                <div class="controls__arrow--left"><img src="./assets/icons/blogger/arrow-left.svg" alt="arrow-left"></div>
+                                <div class="controls__arrow--right"><img src="./assets/icons/blogger/arrow-right.svg" alt="arrow-right"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ! ========== Footer =========== -->
+    <!--  Footer -->
     <footer>
         <section class=" footer">
-            <div class="footer__main">
-                <div class="footer__main__left">
-                    <div class="footer__main__left__logo__text__wrapper">
-                        <div class="footer__main__left__logo__text__wrapper__logo__wrapper">
-                            <img src="./assets/images/navbar/logo.svg" alt="warehouse-logo">
+            <div class="footer__container">
+                <div class="footer__main">
+                    <div class="footer__main--left">
+                        <div class="footer__logo">
+                            <div class="footer__logo--wrapper">
+                                <img src="./assets/images/navbar/logo.svg" alt="warehouse-logo">
+                            </div>
+                            <span>DataWarehouse</span>
                         </div>
-                        <span>DataWarehouse</span>
-                    </div>
-                    <div class="footer__main__left__address__wrapper">
-                        <address>Warehouse Society, 234 Bahagia Ave Street PRBW 29281</address>
-                    </div>
-                    <ul class="footer__main__left__contacts__wrapper">
-                        <li>
-                            <a href="mailto:info@warehouse.project">info@warehouse.project</a>
-                        </li>
-                        <li>
-                            <a href="tel:1-232-3434">1-232-3434 (Main)</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__main__right">
-                    <div class="footer__main__right__social__media">
-                        <div class="footer__main__right__social__media__header">
-                            <h4>Social Media</h4>
+                        <div class="footer__adress">
+                            <address>Warehouse Society, 234 Bahagia Ave Street PRBW 29281</address>
                         </div>
-                        <ul class="footer__main__right__social__media__wrapper">
+                        <ul class="footer__contacts">
                             <li>
-                                <a href="">
-                                    <img src="./assets/images/footer/free-icon-facebook-145802.png" alt="">
-                                </a>
+                                <a href="mailto:info@warehouse.project">info@warehouse.project</a>
                             </li>
                             <li>
-                                <a href="">
-                                    <img src="./assets/images/footer/premium-icon-twitter-3670151.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="./assets/images/footer/premium-icon-instagram-3955024.png" alt="">
-                                </a>
+                                <a href="tel:1-232-3434">1-232-3434 (Main)</a>
                             </li>
                         </ul>
                     </div>
+                    <div class="footer__main--right">
+                        <div class="footer__social-media">
+                            <div class="social-media__header">
+                                <h3>Social Media</h3>
+                            </div>
+                            <ul class="social-media__body">
+                                <li>
+                                    <a href="">
+                                        <img src="./assets/images/footer/free-icon-facebook-145802.png" alt="facebook-icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="./assets/images/footer/premium-icon-twitter-3670151.png" alt="twitter-icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="./assets/images/footer/premium-icon-instagram-3955024.png" alt="instagram-icon">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="footer__secondary">
-                <p>© Datawarehouse™, 2022. All rights reserved.</p>
-                <p>Company Registration Number: 21479524.</p>
+                <div class="footer__secondary">
+                    <p>© Datawarehouse™, 2022. All rights reserved.</p>
+                    <p>Company Registration Number: 21479524.</p>
+                </div>
             </div>
         </section>
     </footer>
