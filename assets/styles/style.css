@@ -68,6 +68,7 @@ img {
 
 [class*="__container"] {
     max-width: 1240px;
+    /* если 0px то без px */
     margin: 0px auto;
     width: 95%;
 }
@@ -115,6 +116,8 @@ img {
     line-height: 1.2;
     color: var(--text-def-color);
 }
+
+/* media всегда в самом низу */
 
 /* ----- PC --- */
 @media (max-width:1239.98px) {
@@ -286,6 +289,7 @@ img {
 }
 
 /* ------ Mobile ------ */
+/* Значения с плавающей точкой в пикселях могут отображаться по-разному в разных браузерах */
 @media (max-width:767.98px) {
     .save-data {
         padding: 110px 0px 30px 0px;
@@ -380,7 +384,7 @@ img {
     .storage-bank__block--text {
         max-width: 500px;
     }
-    
+
     .storage-bank__block--text .block-text__title {
         font-size: 45px;
         line-height: 55px;
@@ -425,11 +429,11 @@ img {
         flex: 0 0 100%;
         order: 1;
     }
-    
+
     .storage-bank__content {
         flex: 0 0 100%;
     }
-    
+
     .storage-bank__block--text {
         max-width: 100%;
     }
@@ -793,7 +797,7 @@ img {
 
 .content__body--text.blur-text {
     background: linear-gradient(to right, var(--text-def-color) 10%, rgba(255, 255, 255, 0) 90%);
-    ;
+;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -1167,7 +1171,7 @@ ul.social-media__body li {
         line-height: 22px;
     }
 
-} 
+}
 
 /* ------ Mobile ------ */
 @media (max-width:767.98px) {
